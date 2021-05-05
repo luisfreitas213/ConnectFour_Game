@@ -1,6 +1,5 @@
 .class1{
   background-color: grey;
-  padding-bottom: 40px;
   text-align: center;
 }
 
@@ -13,15 +12,11 @@ table{
   background-color: white;
 }
 
-td{
-  width:140px;
-  height: 80px;
-}
 
 .top{
   background-color:grey;
-  height:80px;
-  width:140px;
+  height:60px;
+  width:110px;
   border-radius:100%;
   border:10px round black;
   line-height:50px;

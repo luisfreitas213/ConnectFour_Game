@@ -12,7 +12,7 @@
 <div class="container">
   <div class="jumbotron">
     <h1 class="display-4">Welcome to Connect Four</h1><br>
-    <h2>The object of this game is to connect four of your chips in a row!</h2><br>
+    <h2 id = "infotext1">The object of this game is to connect four of your chips in a row!</h2><br>
       <a id = "bottonRestart" <button type="button" class="btn btn-lg btn-success">Restart</button></a>
   </div>
 </div>
@@ -23,9 +23,10 @@
 <button id = "player1" type="button" class="btn btn-lg btn-success" disabled>Player 1</button>
 <button id = "player2" type="button" class="btn btn-lg btn-dark" disabled>Player 2</button>
 </div>
-</div><br>
+</div>
 
-<table>
+<table id = "tabuleiro">
+
   <tr id = "t0">
     <td id = "m0" class="top"></td>
     <td id = "m1" class="top"></td>
@@ -36,60 +37,71 @@
     <td id = "m6" class="top"></td>
   </tr>
   <tr id = "t1">
-    <td id = "m7" class="top"></td>
-    <td id = "m8" class="top"></td>
-    <td id = "m9" class="top"></td>
-    <td id = "m10" class="top"></td>
-    <td id = "m11" class="top"></td>
-    <td id = "m12" class="top"></td>
-    <td id = "m13" class="top"></td>
+    <td id = "m0" class="top"></td>
+    <td id = "m1" class="top"></td>
+    <td id = "m2" class="top"></td>
+    <td id = "m3" class="top"></td>
+    <td id = "m4" class="top"></td>
+    <td id = "m5" class="top"></td>
+    <td id = "m6" class="top"></td>
   </tr>
   <tr id = "t2">
-    <td id = "m14" class="top"></td>
-    <td id = "m15" class="top"></td>
-    <td id = "m16" class="top"></td>
-    <td id = "m17" class="top"></td>
-    <td id = "m18" class="top"></td>
-    <td id = "m19" class="top"></td>
-    <td id = "m20" class="top"></td>
+    <td id = "m0" class="top"></td>
+    <td id = "m1" class="top"></td>
+    <td id = "m2" class="top"></td>
+    <td id = "m3" class="top"></td>
+    <td id = "m4" class="top"></td>
+    <td id = "m5" class="top"></td>
+    <td id = "m6" class="top"></td>
   </tr>
   <tr id = "t3">
-    <td id = "m21" class="top"></td>
-    <td id = "m22" class="top"></td>
-    <td id = "m23" class="top"></td>
-    <td id = "m24" class="top"></td>
-    <td id = "m25" class="top"></td>
-    <td id = "m26" class="top"></td>
-    <td id = "m27" class="top"></td>
+    <td id = "m0" class="top"></td>
+    <td id = "m1" class="top"></td>
+    <td id = "m2" class="top"></td>
+    <td id = "m3" class="top"></td>
+    <td id = "m4" class="top"></td>
+    <td id = "m5" class="top"></td>
+    <td id = "m6" class="top"></td>
   </tr>
   <tr id = "t4">
-    <td id = "m28" class="top"></td>
-    <td id = "m29" class="top"></td>
-    <td id = "m30" class="top"></td>
-    <td id = "m31" class="top"></td>
-    <td id = "m32" class="top"></td>
-    <td id = "m33" class="top"></td>
-    <td id = "m34" class="top"></td>
+    <td id = "m0" class="top"></td>
+    <td id = "m1" class="top"></td>
+    <td id = "m2" class="top"></td>
+    <td id = "m3" class="top"></td>
+    <td id = "m4" class="top"></td>
+    <td id = "m5" class="top"></td>
+    <td id = "m6" class="top"></td>
   </tr>
   <tr id = "t5">
-    <td id = "m35" class="top"></td>
-    <td id = "m36" class="top"></td>
-    <td id = "m37" class="top"></td>
-    <td id = "m38" class="top"></td>
-    <td id = "m39" class="top"></td>
-    <td id = "m40" class="top"></td>
-    <td id = "m41" class="top"></td>
+    <td id = "m0" class="top"></td>
+    <td id = "m1" class="top"></td>
+    <td id = "m2" class="top"></td>
+    <td id = "m3" class="top"></td>
+    <td id = "m4" class="top"></td>
+    <td id = "m5" class="top"></td>
+    <td id = "m6" class="top"></td>
   </tr>
   <tr id = "t6">
-    <td id = "m42" class="top"></td>
-    <td id = "m43" class="top"></td>
-    <td id = "m44" class="top"></td>
-    <td id = "m45" class="top"></td>
-    <td id = "m46" class="top"></td>
-    <td id = "m47" class="top"></td>
-    <td id = "m48" class="top"></td>
+    <td id = "m0" class="top"></td>
+    <td id = "m1" class="top"></td>
+    <td id = "m2" class="top"></td>
+    <td id = "m3" class="top"></td>
+    <td id = "m4" class="top"></td>
+    <td id = "m5" class="top"></td>
+    <td id = "m6" class="top"></td>
   </tr>
 
 </table>
+
   </body>
+
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+
+  <script src = 'functions.js'></script>
+  <script src = 'game.js'></script>
+
+
 </html>
