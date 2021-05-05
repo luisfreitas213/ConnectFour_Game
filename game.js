@@ -1,9 +1,20 @@
+// variable players
 var players = []
 var p1 = ""
 var p2 = ""
-array = zeros([7, 7]);
+// variable dim tabular
+var col = $("#tabuleiro tr").length
+var rows = $("#tabuleiro tr td").length/col
+
+// array calculation tabular
+array = zeros([col, rows]);
 var table = $("#tabuleiro #t0 #m0")
 table.css("background-color", "green")
+
+//array tabular position
+array_tabuleiro = increm(rows, col)
+
+alert(array_tabuleiro)
 //press Restart
 $("#bottonRestart").click(function(){
   //choose name of players
