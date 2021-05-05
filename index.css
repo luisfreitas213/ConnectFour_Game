@@ -1,0 +1,28 @@
+.class1{
+  background-color: grey;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.class2{
+  text-align: right;
+}
+
+table{
+  margin: 0 auto;
+  background-color: white;
+}
+
+td{
+  width:140px;
+  height: 80px;
+}
+
+.top{
+  background-color:grey;
+  height:80px;
+  width:140px;
+  border-radius:100%;
+  border:10px round black;
+  line-height:50px;
+}
