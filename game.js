@@ -6,15 +6,22 @@ var p2 = ""
 var col = $("#tabuleiro tr").length
 var rows = $("#tabuleiro tr td").length/col
 
-// array calculation tabular
-array = zeros([col, rows]);
-var table = $("#tabuleiro #t0 #m0")
-table.css("background-color", "green")
+//validation to number of rows equal to number of columns
+if (col == rows) {
+  // array calculation tabular
+  array = zeros([col, rows])
+  //array tabular position
+  array_tabuleiro = increm(rows, col)
+}else{
+   alert("Number of Rows is Difference number of Columns");
+}
 
-//array tabular position
-array_tabuleiro = increm(rows, col)
+//Start the game
+var start = 0
 
-alert(array_tabuleiro)
+//var table = $("#tabuleiro #t0 #m0")
+//table.css("background-color", "green")
+
 //press Restart
 $("#bottonRestart").click(function(){
   //choose name of players
@@ -28,12 +35,21 @@ $("#bottonRestart").click(function(){
   $("#player2").text(p2)
   //change information text
   $("#infotext1").text(p1 + ", it's your turn!")
-  //initiate array
-  array = zeros([7, 7]);
+  //able player1 and disable player2
+  $("#player1").prop('disabled', false);
+  $("#player2").prop('disabled', true);
+  //initiate arrays
+  array = zeros([col, rows])
+  array_tabuleiro = increm(rows, col)
+  //start the game
+  var start = 1
 })
 
+//play
 
-//Create vectors for the game;
+// $("#tabuleiro #t0 #m0").click(function(){
+//
+// })
 
 //Create a game and validations;
 

@@ -8,7 +8,7 @@ function zeros(dimensions) {
 }
 
 // initiate array position tabular function
-functions increm(rows, col){
+function increm(rows, col){
   array_vector = zeros([col, rows])
   for (var i = 0; i<rows; i++){
     x = 0
@@ -17,10 +17,8 @@ functions increm(rows, col){
       x += 1
     }
   }
-  return array
+  return array_vector
 }
-
-
 
 //Connect Players;
 function playername(){
