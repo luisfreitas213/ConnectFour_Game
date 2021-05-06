@@ -17,18 +17,6 @@ function allGrey(){
   }
 }
 
-// initiate array position tabular function
-function increm(rows, col){
-  array_vector = zeros([col, rows])
-  for (var i = 0; i<rows; i++){
-    x = 0
-    for (var j = 0; j<col; j++){
-      array_vector[i][j] = x
-      x += 1
-    }
-  }
-  return array_vector
-}
 
 //Connect Players;
 function playername(){

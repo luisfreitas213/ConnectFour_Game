@@ -10,8 +10,6 @@ var rows = $("#tabuleiro tr td").length/col
 if (col == rows) {
   // array calculation tabular
   array = zeros([col, rows])
-  //array tabular position
-  array_tabuleiro = increm(rows, col)
 }else{
    alert("Number of Rows is Difference number of Columns");
 }
@@ -37,7 +35,6 @@ $("#bottonRestart").click(function(){
   $("#player2").prop('disabled', true);
   //initiate arrays
   array = zeros([col, rows])
-  array_tabuleiro = increm(rows, col)
   //start the game
   start = 1
   //turn allGrey
@@ -48,36 +45,64 @@ $("#bottonRestart").click(function(){
 $("#tabuleiro #t0 #m0").click(function(){
   game = 0
   playgame(column = 0)
+  win_col()
+  win_row()
+  diag_top_win()
+  diag_bottom_win()
 })
 
 $("#tabuleiro #t0 #m1").click(function(){
   game = 0
   playgame(column = 1)
+  win_col()
+  win_row()
+  diag_top_win()
+  diag_bottom_win()
 })
 
 $("#tabuleiro #t0 #m2").click(function(){
   game = 0
   playgame(column = 2)
+  win_col()
+  win_row()
+  diag_top_win()
+  diag_bottom_win()
 })
 
 $("#tabuleiro #t0 #m3").click(function(){
   game = 0
   playgame(column = 3)
+  win_col()
+  win_row()
+  diag_top_win()
+  diag_bottom_win()
 })
 
 $("#tabuleiro #t0 #m4").click(function(){
   game = 0
   playgame(column = 4)
+  win_col()
+  win_row()
+  diag_top_win()
+  diag_bottom_win()
 })
 
 $("#tabuleiro #t0 #m5").click(function(){
   game = 0
   playgame(column = 5)
+  win_col()
+  win_row()
+  diag_top_win()
+  diag_bottom_win()
 })
 
 $("#tabuleiro #t0 #m6").click(function(){
   game = 0
   playgame(column = 6)
+  win_col()
+  win_row()
+  diag_top_win()
+  diag_bottom_win()
 })
 
 
