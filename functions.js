@@ -53,30 +53,12 @@ function playgame(column){
       if (array[rows-1][column] > 0){
         insertChip(column)
         //insert last ship
-      }else if (turn == p1){
-        array[rows-1][column] = 1
-        $("#tabuleiro #t"+ (rows-1) + " #m"+ (column)).css("background-color", "green")
-        turn = p2
-        game = 1
-        //change information text
-        $("#infotext1").text(p2 + ", it's your turn!")
-        //able player1 and disable player2
-        $("#player1").prop('disabled', true);
-        $("#player2").prop('disabled', false);
       }else{
-        array[rows-1][column] = 2
-        $("#tabuleiro #t"+ (rows-1) + " #m"+ (column)).css("background-color", "black")
-        turn = p1
-        game = 1
-        //change information text
-        $("#infotext1").text(p1 + ", it's your turn!")
-        //able player1 and disable player2
-        $("#player1").prop('disabled', false);
-        $("#player2").prop('disabled', true);
+        insertChip_aux(column, posi = (rows-1), tur = turn)
       }
-    }
-  }else{
-    alert("Please Click in Restart")
+  }
+}else{
+  alert("Please Click in Restart")
   }
 }
 
@@ -89,33 +71,39 @@ function insertChip(column){
     if (stop == 0){
       //if array with chip
       if (array[i][column] > 0){
-        // push in last position
-        if (turn == p1){
-          array[i-1][column] = 1
-          position = "#tabuleiro #t"+ (i-1) + " #m"+ (column)
-          $(position).css("background-color", "green")
-          turn = p2
-          stop = 1
-          game = 1
-          //change information text
-          $("#infotext1").text(p2 + ", it's your turn!")
-          //able player1 and disable player2
-          $("#player1").prop('disabled', true);
-          $("#player2").prop('disabled', false);
-        }else{
-          array[i-1][column] = 2
-          position = "#tabuleiro #t"+ (i-1) + " #m"+ (column)
-          $(position).css("background-color", "black")
-          turn = p1
-          stop = 1
-          game = 1
-          //change information text
-          $("#infotext1").text(p1 + ", it's your turn!")
-          //able player1 and disable player2
-          $("#player1").prop('disabled', false);
-          $("#player2").prop('disabled', true);
-        }
+        // push in last position empty
+        insertChip_aux(column, posi = (i-1), tur = turn)
       }
     }
+  }
+}
+
+function insertChip_aux(column, posi, tur){
+  if (tur == p1){
+    array[posi][column] = 1
+    position = "#tabuleiro #t"+ (posi) + " #m"+ (column)
+    stop = 1
+    game = 1
+
+    $(position).css("background-color", "green")
+    turn = p2
+
+    //change information text
+    $("#infotext1").text(p2 + ", it's your turn!")
+    //able player1 and disable player2
+    $("#player1").prop('disabled', true);
+    $("#player2").prop('disabled', false);
+  }else{
+    array[posi][column] = 2
+    position = "#tabuleiro #t"+ (posi) + " #m"+ (column)
+    $(position).css("background-color", "black")
+    turn = p1
+    stop = 1
+    game = 1
+    //change information text
+    $("#infotext1").text(p1 + ", it's your turn!")
+    //able player1 and disable player2
+    $("#player1").prop('disabled', false);
+    $("#player2").prop('disabled', true);
   }
 }

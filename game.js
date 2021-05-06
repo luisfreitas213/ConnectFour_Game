@@ -81,9 +81,6 @@ $("#tabuleiro #t0 #m6").click(function(){
 })
 
 
-
-//Create a function game and validations;
-
-// Restart correct positions colors;
-
-//Create the validation win;
+//rows validation
+//col validation
+// diagonal validation
