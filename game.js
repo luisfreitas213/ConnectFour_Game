@@ -19,9 +19,6 @@ if (col == rows) {
 //Start the game
 var start = 0
 
-//var table = $("#tabuleiro #t0 #m0")
-//table.css("background-color", "green")
-
 //press Restart
 $("#bottonRestart").click(function(){
   //choose name of players
@@ -42,15 +39,51 @@ $("#bottonRestart").click(function(){
   array = zeros([col, rows])
   array_tabuleiro = increm(rows, col)
   //start the game
-  var start = 1
+  start = 1
+  //turn allGrey
+  allGrey()
 })
 
 //play
+$("#tabuleiro #t0 #m0").click(function(){
+  game = 0
+  playgame(column = 0)
+})
 
-// $("#tabuleiro #t0 #m0").click(function(){
-//
-// })
+$("#tabuleiro #t0 #m1").click(function(){
+  game = 0
+  playgame(column = 1)
+})
 
-//Create a game and validations;
+$("#tabuleiro #t0 #m2").click(function(){
+  game = 0
+  playgame(column = 2)
+})
+
+$("#tabuleiro #t0 #m3").click(function(){
+  game = 0
+  playgame(column = 3)
+})
+
+$("#tabuleiro #t0 #m4").click(function(){
+  game = 0
+  playgame(column = 4)
+})
+
+$("#tabuleiro #t0 #m5").click(function(){
+  game = 0
+  playgame(column = 5)
+})
+
+$("#tabuleiro #t0 #m6").click(function(){
+  game = 0
+  playgame(column = 6)
+})
+
+
+
+//Create a function game and validations;
+
+// Restart correct positions colors;
 
 //Create the validation win;
